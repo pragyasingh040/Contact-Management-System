@@ -10,5 +10,5 @@ exports.createArtifact = async (req, res) => {
 
 exports.getArtifacts = async (req, res) => {
     const artifacts = await Artifact.find().populate("createdBy", "email");
-    res.json("artifacts");
+    res.json(artifacts);
 };
